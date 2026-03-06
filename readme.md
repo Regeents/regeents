@@ -43,11 +43,11 @@ From: 27 February 2026 - To: 06 March 2026
 
 Total Time: 26 hrs 39 mins
 
-TypeScript   21 hrs 26 mins        ⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣿⣿⣿⣿⣿   80.42 %
-JSON         4 hrs 24 mins         ⣀⣀⣀⣀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   16.51 %
-Text         25 mins               ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   01.62 %
-JavaScript   15 mins               ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   00.95 %
-Python       7 mins                ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿   00.48 %
+TypeScript   21 hrs 26 mins        ████████████████████░░░░░   80.42 %
+JSON         4 hrs 24 mins         ████░░░░░░░░░░░░░░░░░░░░░   16.51 %
+Text         25 mins               ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.62 %
+JavaScript   15 mins               ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.95 %
+Python       7 mins                ░░░░░░░░░░░░░░░░░░░░░░░░░   00.48 %
 ```
 
 <!--END_SECTION:waka-->
