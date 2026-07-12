@@ -39,15 +39,15 @@ I am a Web Developer specialized in the **Next.js**, **React**, and **Tailwind C
 <!--START_SECTION:waka-->
 
 ```txt
-From: 03 July 2026 - To: 10 July 2026
+From: 04 July 2026 - To: 11 July 2026
 
-Total Time: 6 hrs 32 mins
+Total Time: 6 hrs 3 mins
 
-JSON         3 hrs 6 mins          ████████████░░░░░░░░░░░░░   47.47 %
-TypeScript   1 hr 58 mins          ███████▓░░░░░░░░░░░░░░░░░   30.20 %
-Python       1 hr 15 mins          ████▓░░░░░░░░░░░░░░░░░░░░   19.22 %
-CSS          10 mins               ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.73 %
-Other        1 min                 ░░░░░░░░░░░░░░░░░░░░░░░░░   00.38 %
+JSON         3 hrs 6 mins          ████████████▓░░░░░░░░░░░░   51.31 %
+TypeScript   1 hr 35 mins          ██████▓░░░░░░░░░░░░░░░░░░   26.22 %
+Python       1 hr 15 mins          █████▒░░░░░░░░░░░░░░░░░░░   20.72 %
+CSS          5 mins                ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.51 %
+Other        0 secs                ░░░░░░░░░░░░░░░░░░░░░░░░░   00.24 %
 ```
 
 <!--END_SECTION:waka-->
