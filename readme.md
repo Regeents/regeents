@@ -52,10 +52,13 @@ Full stack developer focused on the JavaScript and TypeScript ecosystem, buildin
 
 </div>
 
-### Weekly Activity
+### Coding Activity
 
-<details>
-<summary>WakaTime coding stats</summary>
+<div align="center">
+  <a href="https://wakatime.com/@Regeents">
+    <img src="https://wakatime.com/share/@Regeents/4f3f0e51-e889-4d3a-b686-43baf470a909.svg" alt="WakaTime Chart" width="100%" />
+  </a>
+</div>
 
 <!--START_SECTION:waka-->
 
@@ -68,5 +71,3 @@ No activity tracked
 ```
 
 <!--END_SECTION:waka-->
-
-</details>
