@@ -18,7 +18,7 @@ jobs:
       - name: Generate Custom WakaTime SVG Cards
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          SHARE_URL: "https://wakatime.com/share/@Regeents/4f3f0e51-e889-4d3a-b686-43baf470a909.json"
+          SHARE_URL: "https://wakatime.com/share/@Regeents/c3b833e8-1338-4e4b-9386-7640962c40c7.json"
         run: node .github/scripts/generate-waka-card.mjs
 
       - name: Commit and push if changed

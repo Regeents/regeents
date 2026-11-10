@@ -119,12 +119,58 @@ function escapeXml(str) {
     .replace(/"/g, "&quot;");
 }
 
+async function fetchWithRetry(url, headers, retries = 4) {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    const res = await fetch(url, { headers });
+    console.log(`GET ${url.replace(/api_key=[^&]+/, "api_key=***")} -> HTTP ${res.status}`);
+    if (res.status === 202 && attempt < retries) {
+      console.log("WakaTime is calculating stats (202), waiting 4s before retry...");
+      await new Promise((r) => setTimeout(r, 4000));
+      continue;
+    }
+    return res;
+  }
+  return null;
+}
+
+function parseJsonOrJsonp(text) {
+  const trimmed = text.trim();
+  if (trimmed.startsWith("{") || trimmed.startsWith("[")) {
+    return JSON.parse(trimmed);
+  }
+  const stripped = trimmed.replace(/^[^(]*\(([\s\S]*)\)[^)]*$/, "$1");
+  return JSON.parse(stripped);
+}
+
 async function fetchStats() {
-  const apiKey = (process.env.WAKATIME_API_KEY || "").trim();
   const shareUrl =
     process.env.SHARE_URL ||
-    "https://wakatime.com/share/@Regeents/4f3f0e51-e889-4d3a-b686-43baf470a909.json";
+    "https://wakatime.com/share/@Regeents/c3b833e8-1338-4e4b-9386-7640962c40c7.json";
+  const apiKey = (process.env.WAKATIME_API_KEY || "").trim();
 
+  // 1. Primary: Public WakaTime Languages Share JSON/JSONP endpoint
+  try {
+    const res = await fetch(shareUrl);
+    console.log(`GET ${shareUrl} -> HTTP ${res.status}`);
+    if (res.ok) {
+      const text = await res.text();
+      const json = parseJsonOrJsonp(text);
+      const items = Array.isArray(json.data)
+        ? json.data
+        : (json.data && json.data.languages) || [];
+      const active = items.filter(
+        (l) => l && l.name && l.name !== "Other" && (l.percent > 0 || l.total_seconds > 0)
+      );
+      if (active.length > 0) {
+        console.log(`Loaded ${active.length} languages from WakaTime Share URL.`);
+        return { rangeLabel: "Last 30 Days", languages: active.slice(0, 5) };
+      }
+    }
+  } catch (e) {
+    console.log("Share URL fetch error:", e.message);
+  }
+
+  // 2. Fallback: Authenticated WakaTime REST API
   if (apiKey) {
     const ranges = [
       { id: "last_30_days", label: "Last 30 Days" },
@@ -134,41 +180,23 @@ async function fetchStats() {
     for (const r of ranges) {
       try {
         const auth = Buffer.from(apiKey).toString("base64");
-        const res = await fetch(`https://wakatime.com/api/v1/users/current/stats/${r.id}`, {
-          headers: { Authorization: `Basic ${auth}` },
-        });
-        if (res.ok) {
+        const url = `https://wakatime.com/api/v1/users/current/stats/${r.id}?api_key=${encodeURIComponent(apiKey)}`;
+        const res = await fetchWithRetry(url, { Authorization: `Basic ${auth}` });
+        if (res && res.ok) {
           const json = await res.json();
           const langs = (json.data && json.data.languages) || [];
           const active = langs.filter(
             (l) => l.name !== "Other" && (l.percent > 0 || l.total_seconds > 0)
           );
           if (active.length > 0) {
+            console.log(`Found ${active.length} active languages for range ${r.id}`);
             return { rangeLabel: r.label, languages: active.slice(0, 5) };
           }
         }
       } catch (e) {
-        // continue fallback
+        console.log(`Error fetching ${r.id}:`, e.message);
       }
     }
-  }
-
-  try {
-    const res = await fetch(shareUrl);
-    if (res.ok) {
-      const json = await res.json();
-      const items = Array.isArray(json.data)
-        ? json.data
-        : (json.data && json.data.languages) || [];
-      const active = items.filter(
-        (l) => l.name !== "Other" && (l.percent > 0 || l.total_seconds > 0)
-      );
-      if (active.length > 0) {
-        return { rangeLabel: "Recent Activity", languages: active.slice(0, 5) };
-      }
-    }
-  } catch (e) {
-    // fallback below
   }
 
   return null;
@@ -316,11 +344,10 @@ function buildSvg(data, theme = "dark") {
 const DEFAULT_DATA = {
   rangeLabel: "Last 30 Days",
   languages: [
-    { name: "TypeScript", percent: 38.4 },
-    { name: "JavaScript", percent: 26.2 },
-    { name: "Python", percent: 19.5 },
-    { name: "Next.js", percent: 10.8 },
-    { name: "Rust", percent: 5.1 },
+    { name: "TypeScript", percent: 42.5 },
+    { name: "JavaScript", percent: 28.0 },
+    { name: "Python", percent: 18.5 },
+    { name: "Next.js", percent: 11.0 },
   ],
 };
 

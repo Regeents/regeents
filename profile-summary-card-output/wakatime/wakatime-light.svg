@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="700" height="312" viewBox="0 0 700 312">
   <defs>
     <linearGradient id="grad-0" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#235A97" /><stop offset="50%" stop-color="#3178C6" /><stop offset="100%" stop-color="#61AFEF" /></linearGradient>
-<linearGradient id="grad-1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#F0DB4F" /><stop offset="50%" stop-color="#F7DF1E" /><stop offset="100%" stop-color="#E6B400" /></linearGradient>
+<linearGradient id="grad-1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#6E7681" /><stop offset="50%" stop-color="#8B949E" /><stop offset="100%" stop-color="#C9D1D9" /></linearGradient>
 <linearGradient id="grad-2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#3776AB" /><stop offset="50%" stop-color="#4B8BBE" /><stop offset="100%" stop-color="#FFD43B" /></linearGradient>
-<linearGradient id="grad-3" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0070F3" /><stop offset="50%" stop-color="#3291FF" /><stop offset="100%" stop-color="#00DFD8" /></linearGradient>
-<linearGradient id="grad-4" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#B7410E" /><stop offset="50%" stop-color="#F74C00" /><stop offset="100%" stop-color="#DEA584" /></linearGradient>
+<linearGradient id="grad-3" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#F0DB4F" /><stop offset="50%" stop-color="#F7DF1E" /><stop offset="100%" stop-color="#E6B400" /></linearGradient>
+<linearGradient id="grad-4" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1572B6" /><stop offset="50%" stop-color="#33A9DC" /><stop offset="100%" stop-color="#38BDF8" /></linearGradient>
 
     <clipPath id="top-bar-clip">
       <rect x="30" y="58" width="640" height="10" rx="5" />
@@ -40,7 +40,7 @@
 
   <!-- Multi-palette stacked distribution bar -->
   <g clip-path="url(#top-bar-clip)">
-    <rect x="30" y="58" width="246" height="10" fill="url(#grad-0)" /><rect x="276" y="58" width="168" height="10" fill="url(#grad-1)" /><rect x="444" y="58" width="125" height="10" fill="url(#grad-2)" /><rect x="569" y="58" width="69" height="10" fill="url(#grad-3)" /><rect x="638" y="58" width="32" height="10" fill="url(#grad-4)" />
+    <rect x="30" y="58" width="360" height="10" fill="url(#grad-0)" /><rect x="390" y="58" width="210" height="10" fill="url(#grad-1)" /><rect x="600" y="58" width="38" height="10" fill="url(#grad-2)" /><rect x="638" y="58" width="22" height="10" fill="url(#grad-3)" /><rect x="660" y="58" width="10" height="10" fill="url(#grad-4)" />
   </g>
 
   <!-- Table Column Headers -->
@@ -56,21 +56,21 @@
         <circle cx="46" cy="123" r="4.2" fill="#235A97" stroke="#f6f8fa" stroke-width="1" /><circle cx="55" cy="123" r="4.2" fill="#3178C6" stroke="#f6f8fa" stroke-width="1" /><circle cx="64" cy="123" r="4.2" fill="#61AFEF" stroke="#f6f8fa" stroke-width="1" />
         <text x="80" y="127" font-size="13.5" font-weight="600" fill="#24292f">TypeScript</text>
         <rect x="215" y="119" width="330" height="8" rx="4" fill="#eaeef2" />
-        <rect class="bar-fill" x="215" y="119" width="127" height="8" rx="4" fill="url(#grad-0)" />
+        <rect class="bar-fill" x="215" y="119" width="181" height="8" rx="4" fill="url(#grad-0)" />
         
         <rect x="598" y="113" width="62" height="20" rx="10" fill="#235A97" fill-opacity="0.12" />
-        <text x="629" y="127" font-size="12.5" font-weight="700" fill="#235A97" text-anchor="middle">38.4%</text>
+        <text x="629" y="127" font-size="12.5" font-weight="700" fill="#235A97" text-anchor="middle">54.7%</text>
       </g>
     
       <g class="row" style="animation-delay: 120ms">
         <rect x="30" y="144" width="640" height="30" rx="6" fill="#f6f8fa" stroke="#eaeef2" stroke-width="1" />
-        <circle cx="46" cy="159" r="4.2" fill="#F0DB4F" stroke="#f6f8fa" stroke-width="1" /><circle cx="55" cy="159" r="4.2" fill="#F7DF1E" stroke="#f6f8fa" stroke-width="1" /><circle cx="64" cy="159" r="4.2" fill="#E6B400" stroke="#f6f8fa" stroke-width="1" />
-        <text x="80" y="163" font-size="13.5" font-weight="600" fill="#24292f">JavaScript</text>
+        <circle cx="46" cy="159" r="4.2" fill="#6E7681" stroke="#f6f8fa" stroke-width="1" /><circle cx="55" cy="159" r="4.2" fill="#8B949E" stroke="#f6f8fa" stroke-width="1" /><circle cx="64" cy="159" r="4.2" fill="#C9D1D9" stroke="#f6f8fa" stroke-width="1" />
+        <text x="80" y="163" font-size="13.5" font-weight="600" fill="#24292f">JSON</text>
         <rect x="215" y="155" width="330" height="8" rx="4" fill="#eaeef2" />
-        <rect class="bar-fill" x="215" y="155" width="86" height="8" rx="4" fill="url(#grad-1)" />
+        <rect class="bar-fill" x="215" y="155" width="105" height="8" rx="4" fill="url(#grad-1)" />
         
-        <rect x="598" y="149" width="62" height="20" rx="10" fill="#F0DB4F" fill-opacity="0.12" />
-        <text x="629" y="163" font-size="12.5" font-weight="700" fill="#B58900" text-anchor="middle">26.2%</text>
+        <rect x="598" y="149" width="62" height="20" rx="10" fill="#6E7681" fill-opacity="0.12" />
+        <text x="629" y="163" font-size="12.5" font-weight="700" fill="#57606A" text-anchor="middle">31.9%</text>
       </g>
     
       <g class="row" style="animation-delay: 240ms">
@@ -78,32 +78,32 @@
         <circle cx="46" cy="195" r="4.2" fill="#3776AB" stroke="#f6f8fa" stroke-width="1" /><circle cx="55" cy="195" r="4.2" fill="#4B8BBE" stroke="#f6f8fa" stroke-width="1" /><circle cx="64" cy="195" r="4.2" fill="#FFD43B" stroke="#f6f8fa" stroke-width="1" />
         <text x="80" y="199" font-size="13.5" font-weight="600" fill="#24292f">Python</text>
         <rect x="215" y="191" width="330" height="8" rx="4" fill="#eaeef2" />
-        <rect class="bar-fill" x="215" y="191" width="64" height="8" rx="4" fill="url(#grad-2)" />
+        <rect class="bar-fill" x="215" y="191" width="19" height="8" rx="4" fill="url(#grad-2)" />
         
         <rect x="598" y="185" width="62" height="20" rx="10" fill="#3776AB" fill-opacity="0.12" />
-        <text x="629" y="199" font-size="12.5" font-weight="700" fill="#2B5B84" text-anchor="middle">19.5%</text>
+        <text x="629" y="199" font-size="12.5" font-weight="700" fill="#2B5B84" text-anchor="middle">5.8%</text>
       </g>
     
       <g class="row" style="animation-delay: 360ms">
         <rect x="30" y="216" width="640" height="30" rx="6" fill="#f6f8fa" stroke="#eaeef2" stroke-width="1" />
-        <circle cx="46" cy="231" r="4.2" fill="#0070F3" stroke="#f6f8fa" stroke-width="1" /><circle cx="55" cy="231" r="4.2" fill="#3291FF" stroke="#f6f8fa" stroke-width="1" /><circle cx="64" cy="231" r="4.2" fill="#00DFD8" stroke="#f6f8fa" stroke-width="1" />
-        <text x="80" y="235" font-size="13.5" font-weight="600" fill="#24292f">Next.js</text>
+        <circle cx="46" cy="231" r="4.2" fill="#F0DB4F" stroke="#f6f8fa" stroke-width="1" /><circle cx="55" cy="231" r="4.2" fill="#F7DF1E" stroke="#f6f8fa" stroke-width="1" /><circle cx="64" cy="231" r="4.2" fill="#E6B400" stroke="#f6f8fa" stroke-width="1" />
+        <text x="80" y="235" font-size="13.5" font-weight="600" fill="#24292f">JavaScript</text>
         <rect x="215" y="227" width="330" height="8" rx="4" fill="#eaeef2" />
-        <rect class="bar-fill" x="215" y="227" width="36" height="8" rx="4" fill="url(#grad-3)" />
+        <rect class="bar-fill" x="215" y="227" width="11" height="8" rx="4" fill="url(#grad-3)" />
         
-        <rect x="598" y="221" width="62" height="20" rx="10" fill="#0070F3" fill-opacity="0.12" />
-        <text x="629" y="235" font-size="12.5" font-weight="700" fill="#0070F3" text-anchor="middle">10.8%</text>
+        <rect x="598" y="221" width="62" height="20" rx="10" fill="#F0DB4F" fill-opacity="0.12" />
+        <text x="629" y="235" font-size="12.5" font-weight="700" fill="#B58900" text-anchor="middle">3.4%</text>
       </g>
     
       <g class="row" style="animation-delay: 480ms">
         <rect x="30" y="252" width="640" height="30" rx="6" fill="#f6f8fa" stroke="#eaeef2" stroke-width="1" />
-        <circle cx="46" cy="267" r="4.2" fill="#B7410E" stroke="#f6f8fa" stroke-width="1" /><circle cx="55" cy="267" r="4.2" fill="#F74C00" stroke="#f6f8fa" stroke-width="1" /><circle cx="64" cy="267" r="4.2" fill="#DEA584" stroke="#f6f8fa" stroke-width="1" />
-        <text x="80" y="271" font-size="13.5" font-weight="600" fill="#24292f">Rust</text>
+        <circle cx="46" cy="267" r="4.2" fill="#1572B6" stroke="#f6f8fa" stroke-width="1" /><circle cx="55" cy="267" r="4.2" fill="#33A9DC" stroke="#f6f8fa" stroke-width="1" /><circle cx="64" cy="267" r="4.2" fill="#38BDF8" stroke="#f6f8fa" stroke-width="1" />
+        <text x="80" y="271" font-size="13.5" font-weight="600" fill="#24292f">CSS</text>
         <rect x="215" y="263" width="330" height="8" rx="4" fill="#eaeef2" />
-        <rect class="bar-fill" x="215" y="263" width="17" height="8" rx="4" fill="url(#grad-4)" />
+        <rect class="bar-fill" x="215" y="263" width="8" height="8" rx="4" fill="url(#grad-4)" />
         
-        <rect x="598" y="257" width="62" height="20" rx="10" fill="#B7410E" fill-opacity="0.12" />
-        <text x="629" y="271" font-size="12.5" font-weight="700" fill="#B7410E" text-anchor="middle">5.1%</text>
+        <rect x="598" y="257" width="62" height="20" rx="10" fill="#1572B6" fill-opacity="0.12" />
+        <text x="629" y="271" font-size="12.5" font-weight="700" fill="#1572B6" text-anchor="middle">1.3%</text>
       </g>
     
 </svg>
