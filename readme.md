@@ -27,9 +27,14 @@ Full stack developer focused on the JavaScript and TypeScript ecosystem, buildin
   <img src="https://skillicons.dev/icons?i=rust&theme=dark" alt="Rust" />
 </p>
 
-### GitHub Stats
+### GitHub Stats & Coding Activity
 
 <div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/wakatime/wakatime-dark.svg" />
+  <img src="./profile-summary-card-output/wakatime/wakatime-light.svg" alt="Top Languages WakaTime" width="100%" />
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/0-profile-details.svg" />
@@ -51,15 +56,3 @@ Full stack developer focused on the JavaScript and TypeScript ecosystem, buildin
 </picture>
 
 </div>
-
-### Top Languages (Last 30 Days)
-
-<!--START_SECTION:waka-->
-
-| Language | Usage | Share |
-| :--- | :--- | ---: |
-| **TypeScript** | `████████░░░░░░░░` | **—** |
-| **JavaScript** | `█████░░░░░░░░░░░` | **—** |
-| **Python** | `███░░░░░░░░░░░░░` | **—** |
-
-<!--END_SECTION:waka-->
