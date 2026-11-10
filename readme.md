@@ -1,40 +1,61 @@
-# Hi, I'm Regeents! 👋
+<div align="center">
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0070f3&height=200&section=header&text=Full%20Stack%20Developer&fontSize=70&fontAlignY=35" alt="Banner" />
-</p>
+# Regeents
 
-I am a Web Developer specialized in the **Next.js**, **React**, and **Tailwind CSS** ecosystem. I focus on building efficient, scalable web applications and community-driven tools.
+**Full Stack Developer** · Next.js · Node.js · TypeScript · Python
 
----
+[![Discord](https://img.shields.io/badge/Regeents-000000?style=flat-square&logo=discord&logoColor=white)](https://discord.com/users/431259378641928194)
+[![WakaTime](https://img.shields.io/badge/@Regeents-000000?style=flat-square&logo=wakatime&logoColor=white)](https://wakatime.com/@Regeents)
 
-### 💻 Technologies & Stack
-
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=js,react,nextjs,tailwind,html,css,git,vscode,mongodb,nodejs" />
-</p>
+</div>
 
 ---
 
-### 🚀 Featured Projects
+### About
 
-* **[Seven Deadly Sins: Origin Wiki](https://origindb.gg)**: Lead developer for the most comprehensive database and community hub for the game.
-* **Kurono Bot**: A dedicated Discord bot designed to bridge the gap between our wiki data and the community.
+Full stack developer focused on the JavaScript and TypeScript ecosystem, building efficient, scalable web applications and community-driven tools. I also work with Python, and I'm currently exploring Rust.
 
----
+### Stack
 
-### 📊 Coding Activity & Status
-
-<p align="center">
-  <a href="https://discord.com/users/431259378641928194" target="_blank">
-    <img src="https://lanyard.cnrad.dev/api/431259378641928194?bg=1f1f1f&borderRadius=8px" alt="Discord Status" width="400px">
-  </a>
+<p>
+  <img src="https://skillicons.dev/icons?i=ts,js,nextjs,react,nodejs,tailwind,python,mongodb,git&theme=dark" alt="Tech stack" />
 </p>
 
-<p align="center">
-  <a href="https://wakatime.com/@Regeents" target="_blank">
-    <img src="https://metrics.lecoq.io/Regeents?template=classic&wakatime=1&wakatime.sections=languages,editors&wakatime.display=list&config.timezone=America/Mexico_City" alt="WakaTime Stats" width="400px">
-  </a>
+**Currently learning**
+
+<p>
+  <img src="https://skillicons.dev/icons?i=rust&theme=dark" alt="Rust" />
+</p>
+
+### GitHub Stats
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/0-profile-details.svg" />
+  <img src="./profile-summary-card-output/github/0-profile-details.svg" alt="Profile details" width="100%" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/3-stats.svg" />
+  <img src="./profile-summary-card-output/github/3-stats.svg" alt="GitHub stats" width="49%" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/2-most-commit-language.svg" />
+  <img src="./profile-summary-card-output/github/2-most-commit-language.svg" alt="Most committed languages" width="49%" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=Regeents&theme=github-dark-blue&hide_border=true&background=0D1117" />
+  <img src="https://streak-stats.demolab.com?user=Regeents&hide_border=true" alt="GitHub streak" width="100%" />
+</picture>
+
+</div>
+
+### Weekly Activity
+
+<details>
+<summary>WakaTime coding stats</summary>
 
 <!--START_SECTION:waka-->
 
@@ -47,10 +68,5 @@ No activity tracked
 ```
 
 <!--END_SECTION:waka-->
-</p>
 
----
-
-### 📫 Connect with me
-* **Discord**: `Regeents`
-* **WakaTime**: [@Regeents](https://wakatime.com/@Regeents)
+</details>
