@@ -52,22 +52,14 @@ Full stack developer focused on the JavaScript and TypeScript ecosystem, buildin
 
 </div>
 
-### Coding Activity
-
-<div align="center">
-  <a href="https://wakatime.com/@Regeents">
-    <img src="https://wakatime.com/share/@Regeents/4f3f0e51-e889-4d3a-b686-43baf470a909.svg" alt="WakaTime Chart" width="100%" />
-  </a>
-</div>
+### Top Languages (Last 30 Days)
 
 <!--START_SECTION:waka-->
 
-```txt
-From: 24 October 2026 - To: 31 October 2026
-
-Total Time: 0 secs
-
-No activity tracked
-```
+| Language | Usage | Share |
+| :--- | :--- | ---: |
+| **TypeScript** | `████████░░░░░░░░` | **—** |
+| **JavaScript** | `█████░░░░░░░░░░░` | **—** |
+| **Python** | `███░░░░░░░░░░░░░` | **—** |
 
 <!--END_SECTION:waka-->

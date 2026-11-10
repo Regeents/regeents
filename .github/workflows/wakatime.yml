@@ -10,18 +10,101 @@ permissions:
 
 jobs:
   update-readme:
-    name: Update Readme with WakaTime Stats
+    name: Update Readme with WakaTime Table
     runs-on: ubuntu-latest
     steps:
-      - uses: athul/waka-readme@master
-        with:
+      - uses: actions/checkout@v4
+
+      - name: Generate WakaTime Markdown Table
+        env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SHOW_TITLE: false
-          SECTION_NAME: waka
-          BLOCKS: "░▒▓█"
-          TIME_RANGE: all_time
-          LANG_COUNT: 8
-          SHOW_TIME: true
-          SHOW_TOTAL: true
-          STOP_AT_OTHER: true
+          SHARE_URL: "https://wakatime.com/share/@Regeents/4f3f0e51-e889-4d3a-b686-43baf470a909.json"
+        run: |
+          node -e '
+            const fs = require("fs");
+
+            async function fetchStats() {
+              const apiKey = (process.env.WAKATIME_API_KEY || "").trim();
+              if (apiKey) {
+                for (const range of ["last_30_days", "last_year", "all_time"]) {
+                  try {
+                    const auth = Buffer.from(apiKey).toString("base64");
+                    const res = await fetch(`https://wakatime.com/api/v1/users/current/stats/${range}`, {
+                      headers: { Authorization: `Basic ${auth}` }
+                    });
+                    if (res.ok) {
+                      const json = await res.json();
+                      const langs = (json.data && json.data.languages) || [];
+                      const active = langs.filter(l => l.name !== "Other" && (l.percent > 0 || l.total_seconds > 0));
+                      if (active.length > 0) {
+                        return active.slice(0, 5);
+                      }
+                    }
+                  } catch (e) {}
+                }
+              }
+
+              // Fallback to public share JSON endpoint
+              const res = await fetch(process.env.SHARE_URL);
+              if (res.ok) {
+                const json = await res.json();
+                const items = Array.isArray(json.data) ? json.data : (json.data && json.data.languages) || [];
+                return items
+                  .filter(l => l.name !== "Other" && (l.percent > 0 || l.total_seconds > 0))
+                  .slice(0, 5);
+              }
+              return [];
+            }
+
+            function makeBar(pct) {
+              const total = 16;
+              const filled = Math.max(1, Math.round((pct / 100) * total));
+              return "█".repeat(filled) + "░".repeat(Math.max(0, total - filled));
+            }
+
+            (async () => {
+              const langs = await fetchStats();
+              if (!langs.length) {
+                console.log("No language data returned.");
+                process.exit(0);
+              }
+
+              const hasTime = langs.some(l => l.text || l.hours !== undefined);
+              let md = "";
+              if (hasTime) {
+                md += "| Language | Time | Usage | Share |\n";
+                md += "| :--- | :--- | :--- | ---: |\n";
+                for (const l of langs) {
+                  const pct = Number(l.percent || 0).toFixed(1);
+                  const time = l.text || `${l.hours || 0}h ${l.minutes || 0}m`;
+                  md += `| **${l.name}** | \`${time}\` | \`${makeBar(l.percent)}\` | **${pct}%** |\n`;
+                }
+              } else {
+                md += "| Language | Usage | Share |\n";
+                md += "| :--- | :--- | ---: |\n";
+                for (const l of langs) {
+                  const pct = Number(l.percent || 0).toFixed(1);
+                  md += `| **${l.name}** | \`${makeBar(l.percent)}\` | **${pct}%** |\n`;
+                }
+              }
+
+              const readmePath = fs.existsSync("readme.md") ? "readme.md" : "README.md";
+              const content = fs.readFileSync(readmePath, "utf8");
+              const regex = /<!--START_SECTION:waka-->[\s\S]*?<!--END_SECTION:waka-->/;
+              const updated = content.replace(regex, `<!--START_SECTION:waka-->\n\n${md}\n<!--END_SECTION:waka-->`);
+
+              if (updated !== content) {
+                fs.writeFileSync(readmePath, updated, "utf8");
+                console.log("Updated README table successfully.");
+              } else {
+                console.log("Table is already up to date.");
+              }
+            })();
+          '
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add readme.md README.md 2>/dev/null || true
+          git diff --staged --quiet || (git commit -m "chore: update WakaTime top languages table" && git push)
