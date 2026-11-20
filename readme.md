@@ -32,8 +32,8 @@ Full stack developer focused on the JavaScript and TypeScript ecosystem, buildin
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/wakatime/wakatime-dark.svg" />
-  <img src="./profile-summary-card-output/wakatime/wakatime-light.svg" alt="Top Languages WakaTime" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="./wakatime-cards/wakatime-dark.svg" />
+  <img src="./wakatime-cards/wakatime-light.svg" alt="Top Languages WakaTime" width="100%" />
 </picture>
 
 <picture>

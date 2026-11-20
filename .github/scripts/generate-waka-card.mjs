@@ -575,15 +575,16 @@ function buildSvg(data, theme = "dark") {
 const DEFAULT_DATA = {
   rangeLabel: "Last 30 Days",
   languages: [
-    { name: "TypeScript", percent: 42.5 },
-    { name: "JavaScript", percent: 28.0 },
-    { name: "Python", percent: 18.5 },
-    { name: "Next.js", percent: 11.0 },
+    { name: "TypeScript", percent: 54.7 },
+    { name: "JSON", percent: 31.9 },
+    { name: "Python", percent: 5.8 },
+    { name: "JavaScript", percent: 3.4 },
+    { name: "CSS", percent: 1.3 },
   ],
 };
 
 (async () => {
-  const outDir = path.join(process.cwd(), "profile-summary-card-output", "wakatime");
+  const outDir = path.join(process.cwd(), "wakatime-cards");
   fs.mkdirSync(outDir, { recursive: true });
 
   const fetched = await fetchStats();
